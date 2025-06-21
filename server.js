@@ -18,7 +18,7 @@ const app = express()
 // Middleware
 const allowedOrigins = [
   "http://localhost:3000", // for local testing
-  "https://your-frontend.vercel.app", // replace with actual Vercel URL
+  "https://hostel-frontend-eight.vercel.app/", // replace with actual Vercel URL
 ]
 
 app.use(

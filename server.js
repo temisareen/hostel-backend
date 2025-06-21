@@ -16,7 +16,18 @@ const adminRoutes = require("./routes/admin")
 const app = express()
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+  "http://localhost:3000", // for local testing
+  "https://your-frontend.vercel.app", // replace with actual Vercel URL
+]
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true, // if using cookies or auth headers
+  })
+)
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
